@@ -6,12 +6,18 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'google-api-client', '~> 0.10'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks', '~> 5'
 gem 'koala'
 gem 'omniauth'
 gem 'omniauth-facebook'

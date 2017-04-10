@@ -1,45 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<article class="post">
+  <section class="post-head">
+    <h2><%= @post.title  %></h2>
 
-<p>
-  <strong>Body:</strong>
-  <%= raw @post.body %>
-</p>
+    <small> 
+      <time><%= @post.created_at.to_date.strftime("%d %B, %Y") %></time>
 
-<p>
-  <%= image_tag @post.image.url %>
-</p>
+      <%= link_to 'Edit', edit_post_path(@post) %>
+      <%= link_to 'Destroy', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </small>
+  </section>
 
-<p>
-</p>
+  <section class="post-body">
+    <%= raw @post.body %>
+  </section>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%#= image_tag @post.image.url %>
+
+<%= link_to 'Back', posts_path, class: 'btn btn-secondary' %>
 
 <% accounts = Account.where(user_id: [current_user.id]).select(:provider).each do |q| %>
+
   <% if q.provider == 'twitter' %>
+
     <%= form_for :body, url: send_tweet_path, method: :post do |f| %>
       <%= f.hidden_field :body, { value: @post.body }%>
-      <%= f.submit "Send Tweet" %>
+      <%= f.submit "Send Tweet", class: 'btn btn-primary' %>
     <% end %>
+
   <% elsif q.provider == 'vkontakte' %>
+
     <%= form_for :body, url: send_vk_path, method: :post do |f| %>
       <%= f.hidden_field :body, { value: @post.body }%>
-      <%= f.submit "Send to VK" %>
+      <%= f.submit "Send to VK", class: 'btn btn-primary' %>
     <% end %>
+
   <% elsif q.provider == 'google_oauth2' %>
+
     <%= form_for :body, url: send_vk_path, method: :post do |f| %>
       <%= f.hidden_field :body, { value: @post.body }%>
-      <%= f.submit "Send to Google+" %>
+      <%= f.submit "Send to Google+", class: 'btn btn-primary' %>
     <% end %>
+
   <% elsif q.provider == 'facebook' %>
+
     <%= form_for :body, url: send_fb_path, method: :post do |f| %>
       <%= f.hidden_field :body, { value: @post.body }%>
-      <%= f.submit "Send to Facebook" %>
+      <%= f.submit "Send to Facebook", class: 'btn btn-primary' %>
     <% end %>
+
   <% end %>
 <% end %>
+
+</article>
