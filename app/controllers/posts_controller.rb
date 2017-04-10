@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.where(user_id: [current_user.id])
+    @posts = Post.where(user_id: [current_user.id]).paginate(:page => params[:page], :per_page => 10)
   end
 
   def show;end

@@ -38,11 +38,7 @@ gem 'twitter'
 gem 'uglifier', '>= 1.3.0'
 gem 'vkontakte_api', '~> 1.4'
 gem 'feedjira'
-
-# group :production do
-#  gem 'pg'
-#  gem 'rails_12factor'
-# end
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
