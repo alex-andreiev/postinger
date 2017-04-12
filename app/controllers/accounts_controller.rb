@@ -37,7 +37,7 @@ class AccountsController < ApplicationController
 
   def get_vk_token
     vk_url = 'https://oauth.vk.com/authorize?client_id=5963835&scope=groups,wall,offline,photos&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token'
-    redirect_to vk_url
+    redirect_to vk_path
   end
 
   private

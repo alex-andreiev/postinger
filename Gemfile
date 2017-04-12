@@ -28,6 +28,7 @@ gem 'paperclip'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', require: false
+gem 'resque'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'sqlite3'
