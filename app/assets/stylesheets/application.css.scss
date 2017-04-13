@@ -4,6 +4,7 @@
  *= require trix
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 @mixin box-shadow {

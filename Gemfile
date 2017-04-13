@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
@@ -37,6 +36,7 @@ gem 'twitter'
 gem 'vkontakte_api', '~> 1.4'
 gem 'feedjira'
 gem 'will_paginate'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
