@@ -125,4 +125,11 @@ RSpec.describe AccountsController, type: :controller do
       expect(response).to redirect_to(accounts_url)
     end
   end
+
+  describe 'GET #get_vk_token' do 
+    it 'redirects to the oauth vk url' do
+      url = 'https://oauth.vk.com/authorize?client_id=5963835&scope=groups,wall,offline,photos&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token'
+      expect(response).to have_http_status(200)      
+    end
+  end
 end
