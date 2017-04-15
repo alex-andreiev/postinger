@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
   def send_tweet
     current_user.twitter.update(message[0...140])
-    redirect_to post_path, notice: 'Post was seccussefully send to twitter'
+    redirect_to :back, notice: 'Post was seccussefully send to twitter'
   end
 
   def message
@@ -47,12 +47,12 @@ class PostsController < ApplicationController
 
   def send_vk
     current_user.vk.wall.post(message: message)
-    redirect_to post_path, notice: 'Post was seccussefully send to vk'
+    redirect_to :back, notice: 'Post was seccussefully send to vk'
   end
 
   def send_fb
     current_user.facebook.put_wall_post(message)
-    redirect_to post_path, notice: 'Post was seccussefully send to Facebook'
+    redirect_to :back, notice: 'Post was seccussefully send to Facebook'
   end
 
   private
