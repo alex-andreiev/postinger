@@ -1,5 +1,7 @@
 class Account < ApplicationRecord
   belongs_to :user
+  validates :provider, presence: true
+  validates :uid, presence: true
 
   def self.find_for_oauth(auth)
     if ['twitter'].include?(auth.provider)
