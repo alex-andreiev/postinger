@@ -125,4 +125,17 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to redirect_to(posts_url)
     end
   end
+
+  describe 'POST #send_tweet' do
+    let(:twitter_account) { FactoryGirl.attributes_for(:account, user_id: user.id) }
+
+    it 'sends message to twitter' do 
+      @acconut = Account.create! twitter_account 
+      @post = Post.create! valid_attributes
+      post :send_tweet, params: {}, session: valid_session
+      expect(response).to have_http_status(302)
+      expect(response).to redirect_to(:back)
+    end
+  end  
+
 end
