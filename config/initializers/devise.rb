@@ -278,4 +278,5 @@ Devise.setup do |config|
   config.omniauth :twitter, Rails.application.secrets.twitter_api_key, Rails.application.secrets.twitter_api_secret
   config.omniauth :vkontakte, Rails.application.secrets.vk_api_key, Rails.application.secrets.vk_api_secret
   config.omniauth :google_oauth2, Rails.application.secrets.google_api_id, Rails.application.secrets.google_api_key
+  config.omniauth :odnoklassniki, Rails.application.secrets.odnoklassniki_app_id, Rails.application.secrets.odnoklassniki_app_secret,  :public_key => Rails.application.secrets.odnoklassniki_app_public
 end

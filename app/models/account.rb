@@ -30,6 +30,13 @@ class Account < ApplicationRecord
         provider: auth.provider,
         email: auth.info.email
       )
+    elsif ['odnoklassniki'].include?(auth.provider)
+      find_or_create_by(
+        uid: auth.uid,
+          provider: auth.provider,
+          email: auth.info.email,
+          token_odnoklassniki: auth.credentials.token
+      )
     end
   end
 end

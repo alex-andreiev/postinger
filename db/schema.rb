@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408151125) do
+ActiveRecord::Schema.define(version: 20170416101259) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "provider"
@@ -22,8 +22,11 @@ ActiveRecord::Schema.define(version: 20170408151125) do
     t.string   "token_vk"
     t.string   "token_fb"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "tokenok"
+    t.string   "token_okr"
+    t.string   "token_odnoklassniki"
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
