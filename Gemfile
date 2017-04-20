@@ -28,6 +28,7 @@ gem 'paperclip'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', require: false
+gem 'resque'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'sqlite3'
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
