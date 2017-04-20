@@ -40,6 +40,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'vkontakte_api', '~> 1.4'
 gem 'feedjira'
 gem 'will_paginate'
+gem 'odnoklassniki'
+gem 'omniauth-odnoklassniki'
 
 group :development, :test do
   gem 'byebug', platform: :mri

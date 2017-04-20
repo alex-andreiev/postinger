@@ -69,4 +69,10 @@ class User < ApplicationRecord
     secret = Account.where(provider: 'vkontakte').first
     @vk = VkontakteApi::Client.new(secret.token_vk)
   end
+
+  def odnoklassniki
+    secret = Account.where(provider: 'odnoklassniki').first
+    @odnoklassniki = Odnoklassniki::Client.new(access_token: token_odnoklassniki)
+  end
+  
 end
