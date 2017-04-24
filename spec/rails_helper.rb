@@ -3,6 +3,7 @@ require File.expand_path('../../config/environment', __FILE__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
+require_relative 'support/omniauth_macros'
 
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -16,4 +17,5 @@ RSpec.configure do |config|
   config.include Warden::Test::Helpers  
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+  config.include(OmniauthMacros)
 end

@@ -16,16 +16,17 @@ class User < ApplicationRecord
     identity = Account.find_for_oauth(auth)
     user = signed_in_resource ? signed_in_resource : identity.user
     if user.nil?
-      email_is_verified = auth.info.email && (auth.info.verified || auth.info.verified_email)
-      email = auth.info.email if email_is_verified
-      user = User.where(email: email).first if email
-      if user.nil?
+      #email_is_verified = auth.info.email && (auth.info.verified || auth.info.verified_email)
+      #email = auth.info.email #if email_is_verified
+      #user = User.where(email: email).first if email
+      #if user.nil?
         user = User.new(
           password: Devise.friendly_token[0, 20],
-          email: email ? email :"#{auth.uid}#{TEMP_EMAIL_PREFIX}#{auth.provider}.com"
+          #email: email ? email : "#{auth.uid}#{TEMP_EMAIL_PREFIX}#{auth.provider}.com"
+          email: auth.info.email
         )
         user.save!
-      end
+      #end
     end
 
     if identity.user != user
