@@ -1,17 +1,17 @@
 <% if @posts.present? %>
 
-  <div class="centrpost">
-    <h1>Posts</h1>
+  <h1>Posts</h1>
 
-    <%= render @posts %>
-
-    <%= will_paginate @posts  %>
-  </div>
+    <div class="container">
+      <div class="row">
+          <%= render @posts %>
+      </div>
+    </div>
 
 <% else %>
 
   <div class="center-btn">
-    <a href="/posts/new" class="btn btn-success btn-lg btn-block" role="button">Create posts</a>
+    <a href="/posts/new" class="btn btn-default btn-lg btn-block" role="button">Create posts</a>
   </div>
 
 <% end %>

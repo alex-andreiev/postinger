@@ -1,5 +1,5 @@
 article.post {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em 0;
   border-bottom: 1px solid lightblue;
   text-align: center;
@@ -37,4 +37,9 @@ article.post {
   &-content {
     margin: 10px 0;
   }
+}
+
+.row {
+    margin-right: 10% !important;
+    margin-left: 10% !important;
 }
