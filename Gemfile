@@ -21,7 +21,6 @@ gem 'turbolinks', '~> 5'
 gem 'koala'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
 gem 'paperclip'
@@ -42,6 +41,8 @@ gem 'feedjira'
 gem 'will_paginate'
 gem 'odnoklassniki'
 gem 'omniauth-odnoklassniki'
+gem 'vcr'
+gem 'webmock'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -73,7 +73,11 @@ class User < ApplicationRecord
 
   def odnoklassniki
     secret = Account.where(provider: 'odnoklassniki').first
-    @odnoklassniki = Odnoklassniki::Client.new(access_token: token_odnoklassniki)
+    @odnoklassniki = Odnoklassniki::Client.new do |config|
+      config.application_key = Rails.application.secrets.ok_api_key
+      config.client_id       = secret.uid
+      config.client_secret   = secret.token_odnoklassniki
+    end
   end
   
 end

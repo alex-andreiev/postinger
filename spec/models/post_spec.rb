@@ -30,8 +30,4 @@ RSpec.describe Post, type: :model do
       should belong_to(:user)
     end
   end
-
-
-
-
 end

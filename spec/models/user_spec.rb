@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
 
     it 'vkontakte client' do
       Account.create! FactoryGirl.attributes_for(:account, provider: 'vkontakte', token_vk: '12345678', user_id: user.id)
-      expect(user.vkontakte.to_s).to include("VkontakteApi::Client")
+      expect(user.vk.to_s).to include("VkontakteApi::Client")
     end
 
     it 'odnoklassniki client' do
