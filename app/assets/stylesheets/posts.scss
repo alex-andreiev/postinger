@@ -1,13 +1,45 @@
 article.post {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em 0;
   border-bottom: 1px solid lightblue;
+  text-align: center;
   }
 
   h2 {
-    margin-bottom: 0;
+    margin: 0;
     }
   section.post-body {
-    padding: .5em 0;
+    padding: 0 0 .5em 0;
+    div {
+      font-size: 20px
     }
-  
+  }
+
+.post {
+  &-heading {
+  	padding: 15px 0;
+  	margin: 0;
+  	font-size: 35px;
+    font-weight: normal;
+  	line-height: 1.5;
+    padding-left: 10px;
+  	a {
+  		color: #000000;
+      font-size: 25px;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus  {
+        text-decoration: none;
+      }
+  	}
+  }
+  &-content {
+    margin: 10px 0;
+  }
+}
+
+.row {
+    margin-right: 10% !important;
+    margin-left: 10% !important;
+}

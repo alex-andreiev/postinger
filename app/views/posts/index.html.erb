@@ -1,8 +1,17 @@
-<h1>Posts</h1>
+<% if @posts.present? %>
 
-<%= link_to 'New Post', new_post_path %>
+  <h1>Posts</h1>
 
-<%= render @posts %>
+    <div class="container">
+      <div class="row">
+          <%= render @posts %>
+      </div>
+    </div>
 
-<%= will_paginate @posts  %>
+<% else %>
 
+  <div class="center-btn">
+    <a href="/posts/new" class="btn btn-default btn-lg btn-block" role="button">Create posts</a>
+  </div>
+
+<% end %>
