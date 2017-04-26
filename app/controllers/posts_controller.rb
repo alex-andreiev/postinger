@@ -55,6 +55,11 @@ class PostsController < ApplicationController
     redirect_to :back, notice: 'Post was seccussefully send to Facebook'
   end
 
+  def send_odnoklassniki
+    client.mediatopic.post(message: message)
+    redirect_to :back, notice: 'Post was seccussefully send to Odnoklassniki'
+  end
+
   private
 
   def set_post

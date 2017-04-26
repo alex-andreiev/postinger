@@ -20,13 +20,13 @@ gem 'turbolinks', '~> 5'
 gem 'koala'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
 gem 'paperclip'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', require: false
+gem 'resque'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'sqlite3'
@@ -37,6 +37,10 @@ gem 'vkontakte_api', '~> 1.4'
 gem 'feedjira'
 gem 'will_paginate'
 gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'odnoklassniki'
+gem 'omniauth-odnoklassniki'
+gem 'vcr'
+gem 'webmock'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -44,6 +48,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara'
 end
 
 group :development do
