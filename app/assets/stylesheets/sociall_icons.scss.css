@@ -1,5 +1,9 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
+h4 {
+  text-align: center;
+}
+
 body {
   margin: 5em;
 }
@@ -18,7 +22,7 @@ body {
   float: left;
 }
 
-.fa-facebook:hover, .fa-twitter:hover, .fa-google-plus:hover, .fa-linkedin:hover {
+.fa-facebook:hover, .fa-twitter:hover, .fa-vk-plus:hover, .fa-odnoklassniki:hover {
   color: hsl(0, 0%, 100%);
 }
 
@@ -37,7 +41,9 @@ body {
 }
 
 .shadow .fa-facebook,
-.shadow .fa-twitter, {
+.shadow .fa-twitter,
+.shadow .fa-vk,
+.shadow .fa-odnoklassniki, {
   border-color: hsl(0, 0%, 100%);
   border: none;
   padding: 11px;
@@ -50,11 +56,24 @@ body {
 
 .square {
   padding: 9px 9px;
-  width: 40px;
+  width: 42px;
   font-size: 20px;
   text-align: center;
   background: #fff;
 }
+
+.fa-vk.square {
+  background-color: hsl(221, 44%, 41%);
+  border: 1px solid hsl(221, 44%, 41%);
+  color: #fff;
+}
+
+.fa-vk.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(221, 44%, 41%);
+  color: hsl(221, 44%, 41%);
+}
+
 
 .fa-facebook.square {
   background-color: hsl(221, 44%, 41%);
@@ -78,4 +97,16 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-color: hsl(195, 100%, 60%);
   color: hsl(195, 100%, 60%);
+}
+
+.fa-odnoklassniki.square {
+  background-color: hsl(221, 44%, 41%);
+  border: 1px solid hsl(221, 44%, 41%);
+  color: #fff;
+}
+
+.fa-odnoklassniki.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(221, 44%, 41%);
+  color: hsl(221, 44%, 41%);
 }
