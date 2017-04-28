@@ -1,6 +1,12 @@
 <article class="open-post">
   <section class="post-head">
     <h2  class= 'post-heading'><%= @post.title %></h2>
+    <small>
+      <time><%= @post.created_at.to_date.strftime("%d %B, %Y") %></time>
+
+      <%= link_to 'Edit', edit_post_path(@post) %>
+      <%= link_to 'Destroy', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </small>
   </section>
 
   <section class="post-body">
@@ -8,12 +14,7 @@
       <%= raw @post.body %>
     </div>
   </section>
-  <small>
-    <time><%= @post.created_at.to_date.strftime("%d %B, %Y") %></time>
 
-    <%= link_to 'Edit', edit_post_path(@post) %>
-    <%= link_to 'Destroy', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-  </small>
   <%#= image_tag @post.image.url %>
 
 <p>
@@ -49,6 +50,13 @@
       <%= f.hidden_field :body, { value: @post.body }%>
       <%= f.submit "Send to Facebook", class: 'btn btn-primary' %>
     <% end %>
+
+    <% elsif q.provider == 'Odnoklassniki' %>
+
+      <%= form_for :body, url: send_odnoklassniki_path, method: :post do |f| %>
+        <%= f.hidden_field :body, { value: @post.body }%>
+        <%= f.submit "Send to OK", class: 'btn btn-primary' %>
+      <% end %>
 
   <% end %>
 <% end %>

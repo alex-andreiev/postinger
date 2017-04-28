@@ -17,7 +17,7 @@ class RssfeedsController < ApplicationController
     @rssfeed = Rssfeed.new(rssfeed_params)
     @rssfeed.user_id = current_user.id
     if @rssfeed.save
-      redirect_to rssfeeds_path, notice: 'RSS was successfully created.'
+      redirect_to @rssfeed, notice: 'RSS was successfully created.'
     else
       render :new
     end
@@ -25,7 +25,7 @@ class RssfeedsController < ApplicationController
 
   def update
     if @rssfeed.update(rssfeed_params)
-      redirect_to rssfeeds_path, notice: 'RSS was successfully updated.' 
+      redirect_to @rssfeed, notice: 'RSS was successfully updated.' 
     else
       render :edit, notice: 'RSS was successfully updated.'  
     end
@@ -33,7 +33,7 @@ class RssfeedsController < ApplicationController
 
   def destroy
     @rssfeed.destroy
-    redirect_to root_path, notice: 'RSS was successfully destroyed.'
+    redirect_to rssfeedfs_url, notice: 'RSS was successfully destroyed.'
   end
 
   def rss

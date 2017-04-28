@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   end
 
   def message
-    params[:body].inspect.to_s.gsub!(/<[a-zA-Z\/][^>]*>/,"").to_s
+    params[:body].first.to_s.gsub(/<[a-zA-Z\/][^>]*>/,"").split('"')[3]
   end
 
   def send_vk
@@ -53,6 +53,11 @@ class PostsController < ApplicationController
   def send_fb
     current_user.facebook.put_wall_post(message)
     redirect_to :back, notice: 'Post was seccussefully send to Facebook'
+  end
+
+  def send_odnoklassniki
+    client.mediatopic.post(message: message)
+    redirect_to :back, notice: 'Post was seccussefully send to Odnoklassniki'
   end
 
   private
