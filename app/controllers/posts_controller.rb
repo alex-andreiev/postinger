@@ -43,7 +43,6 @@ class PostsController < ApplicationController
 
   def message
     params[:body].first.to_s.gsub(/<[a-zA-Z\/][^>]*>/,"").split('"')[3]
-    #params[:body].first.to_s
   end
 
   def send_vk
