@@ -1,0 +1,116 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+h4 {
+  text-align: center;
+}
+
+body {
+  margin: 5em;
+}
+
+.general {
+  padding-left: 4%;
+}
+
+.social-icons {
+  list-style-type: none;
+  margin: 0 auto 20px;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+}
+
+.tab {
+  margin-right: 10px;
+  border-radius: 0 0 25px 25px;
+  float: left;
+}
+
+.fa-facebook:hover, .fa-twitter:hover, .fa-vk-plus:hover, .fa-odnoklassniki:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.screen-reader {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.shadow .tab {
+  background: none;
+}
+
+.shadow .circle {
+  box-shadow: 1px 1px 3px hsla(0, 0%, 0%, .4);
+}
+
+.shadow .fa-facebook,
+.shadow .fa-twitter,
+.shadow .fa-vk,
+.shadow .fa-odnoklassniki, {
+  border-color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 11px;
+
+}
+
+.squares .tab {
+  background: none;
+}
+
+.square {
+  padding: 14px;
+  width: 50px;
+  font-size: 20px !important;
+  text-align: center;
+  background: #fff;
+}
+
+.fa-vk.square {
+  background-color: hsl(221, 44%, 41%);
+  border: 1px solid hsl(221, 44%, 41%);
+  color: #fff;
+}
+
+.fa-vk.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(221, 44%, 41%);
+  color: hsl(221, 44%, 41%);
+}
+
+
+.fa-facebook.square {
+  background-color: hsl(221, 44%, 41%);
+  border: 1px solid hsl(221, 44%, 41%);
+  color: #fff;
+}
+
+.fa-facebook.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(221, 44%, 41%);
+  color: hsl(221, 44%, 41%);
+}
+
+.fa-twitter.square {
+  background-color: hsl(195, 100%, 60%);
+  border: 1px solid hsl(195, 100%, 60%);
+  color: #fff;
+}
+
+.fa-twitter.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(195, 100%, 60%);
+  color: hsl(195, 100%, 60%);
+}
+
+.fa-odnoklassniki.square {
+  background-color: hsl(24, 100%, 50%);
+  border: 1px solid hsl(24, 100%, 50%);
+  color: #fff;
+}
+
+.fa-odnoklassniki.square:hover {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(24, 100%, 50%);
+  color: hsl(24, 100%, 50%);
+}

@@ -41,6 +41,7 @@ gem 'odnoklassniki'
 gem 'omniauth-odnoklassniki'
 gem 'vcr'
 gem 'webmock'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platform: :mri
