@@ -104,6 +104,8 @@ GEM
       loofah (>= 2.0)
       sax-machine (>= 1.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     google-api-client (0.11.1)
@@ -411,6 +413,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   feedjira
+  font-awesome-rails
   google-api-client (~> 0.10)
   haml (~> 4.0, >= 4.0.7)
   jbuilder (~> 2.5)
