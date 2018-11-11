@@ -16,6 +16,7 @@ gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 gem 'slim-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
