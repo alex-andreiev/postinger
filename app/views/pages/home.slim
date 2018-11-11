@@ -1,0 +1,21 @@
+= stylesheet_link_tag 'pages/home', media: 'all', 'data-turbolinks-track': 'reload'
+
+= render 'navbar'
+
+/! Header
+header.masthead.bg-primary.text-white.text-center
+  .container
+    h1.text-uppercase.mb-0 Auto posting to facebook
+    hr.star-light
+    h2.font-weight-light.mb-0 Powered by Alex - Ruby on Rais developer
+section#about.bg-primary.text-white.mb-0
+  .container
+    h2.text-center.text-uppercase.text-white About
+    hr.star-light.mb-5
+    .row
+      .col-lg-4.ml-auto
+        p.lead Automatically post new content to your Facebook Pages and Facebook Groups. Hands-free, automated social media sharing. Use powerful frequency controls, scheduling and filters to manage posting volume.
+      .col-lg-4.mr-auto
+        p.lead Tailor your Facebook posts with custom text, images, auto-hashtags, and short links. Instantly post new items or automatically queue them up and share on your schedule. You’re in complete control.
+
+= render 'footer'
