@@ -3,7 +3,7 @@
 class PagesController < ApplicationController
   def show
     render template: "pages/#{params[:page]}"
-  rescue
+  rescue StandardError
     render file: 'public/404.html', status: :not_found
   end
 end
