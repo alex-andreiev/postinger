@@ -1,12 +1,6 @@
-= stylesheet_link_tag 'pages/home', media: 'all', 'data-turbolinks-track': 'reload'
-
-= render 'navbar'
-
 header.masthead.bg-primary.text-white.text-center
   .container
     h1.mb-4 Contact email
     h2.mb-0
       address
         = mail_to ENV['CONTACT_EMAIL']
-
-= render 'footer'
